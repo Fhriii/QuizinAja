@@ -63,6 +63,14 @@ namespace CobaDekstop_1_
                                 string code = reader.GetString("Code");
                                 string description = reader.GetString("Description");
                                 int numberOfQuestions = reader.GetInt32("jumlahpertanyaan");
+                                // Pastikan Anda sudah memiliki sebuah kolom DataGridViewButtonColumn
+                                DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
+                                deleteButtonColumn.HeaderText = "Delete";
+                                deleteButtonColumn.Text = "Delete";
+                                deleteButtonColumn.UseColumnTextForButtonValue = true;
+
+                                // Tambahkan kolom ke DataGridView
+                                dgvQuiz.Columns.Add(deleteButtonColumn);
 
                                 dgvQuiz.Rows.Add(name, code, description, numberOfQuestions);
                             }
@@ -78,6 +86,45 @@ namespace CobaDekstop_1_
 
 
 
+        }
+
+        private void AddQuiz_Click(object sender, EventArgs e)
+        {
+            Addquiz();
+        }
+        public void Addquiz()
+        {
+            this.Hide();
+            Add_quiz add = new Add_quiz();
+            add.ShowDialog();
+            this.Close();
+        }
+
+        private void ViewReport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Apakah Anda yakin ingin melanjutkan?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                Login login = new Login();
+                login.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void CellContent_Click(object sender, DataGridViewCellEventArgs e)
+        {
+           
         }
     }
 }

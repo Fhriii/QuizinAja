@@ -31,3 +31,4 @@ C:\Users\muham\source\repos\CobaDekstop(1)\CobaDekstop(1)\obj\Debug\net7.0-windo
 C:\Users\muham\source\repos\CobaDekstop(1)\CobaDekstop(1)\obj\Debug\net7.0-windows\ref\CobaDekstop(1).dll
 C:\Users\muham\source\repos\CobaDekstop(1)\CobaDekstop(1)\obj\Debug\net7.0-windows\CobaDekstop_1_.Create_Acount.resources
 C:\Users\muham\source\repos\CobaDekstop(1)\CobaDekstop(1)\obj\Debug\net7.0-windows\CobaDekstop_1_.Login.resources
+C:\Users\muham\source\repos\CobaDekstop(1)\CobaDekstop(1)\obj\Debug\net7.0-windows\CobaDekstop_1_.Add_quiz.resources
