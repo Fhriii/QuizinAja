@@ -50,7 +50,7 @@
             radioButton2 = new RadioButton();
             radioButton1 = new RadioButton();
             Question = new TextBox();
-            button2 = new Button();
+            Save = new Button();
             button3 = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvQuestion).BeginInit();
@@ -246,14 +246,15 @@
             Question.Size = new Size(192, 78);
             Question.TabIndex = 0;
             // 
-            // button2
+            // Save
             // 
-            button2.Location = new Point(566, 502);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 4;
-            button2.Text = "Save";
-            button2.UseVisualStyleBackColor = true;
+            Save.Location = new Point(566, 502);
+            Save.Name = "Save";
+            Save.Size = new Size(75, 23);
+            Save.TabIndex = 4;
+            Save.Text = "Save";
+            Save.UseVisualStyleBackColor = true;
+            Save.Click += Save_Click;
             // 
             // button3
             // 
@@ -270,7 +271,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 522);
             Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(Save);
             Controls.Add(groupBox1);
             Controls.Add(description);
             Controls.Add(code);
@@ -301,7 +302,7 @@
         private TextBox Question;
         private DataGridView dgvQuestion;
         private Button addquest;
-        private Button button2;
+        private Button Save;
         private Button button3;
         private DataGridViewTextBoxColumn Number;
         private DataGridViewTextBoxColumn Quest;

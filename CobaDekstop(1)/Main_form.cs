@@ -15,13 +15,13 @@ namespace CobaDekstop_1_
 {
     public partial class Main_form : Form
     {
-        int QuizId;
+
         public int UserId { get; set; }
         public Main_form(int userId)
         {
             InitializeComponent();
             UserId = userId;
-            QuizId = UserId;
+
         }
 
         private void load(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace CobaDekstop_1_
                 using (var cmdQuiz = new MySqlCommand(queryQuiz, koneksi))
                 {
                     cmdQuiz.Parameters.AddWithValue("@Userid", UserId);
-                    cmdQuiz.Parameters.AddWithValue("@Quizid", QuizId);
+
 
                     try
                     {
@@ -95,7 +95,7 @@ namespace CobaDekstop_1_
         public void Addquiz()
         {
             this.Hide();
-            Add_quiz add = new Add_quiz();
+            Add_quiz add = new Add_quiz(UserId);
             add.ShowDialog();
             this.Close();
         }
